@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { SafeAreaView, View, Text, StyleSheet, FlatList, Alert, TextInput, TouchableOpacity, Platform } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Alert, TextInput, TouchableOpacity, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import TarjetaContacto from '@/components/TarjetaContacto';

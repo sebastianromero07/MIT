@@ -5,11 +5,11 @@ import {
   StyleSheet, 
   TextInput, 
   TouchableOpacity, 
-  SafeAreaView, 
   Platform,
   ScrollView,
   KeyboardAvoidingView
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
@@ -127,7 +127,7 @@ function InputBlock({ label, icon, placeholder, secureTextEntry = false, keyboar
     <View style={styles.inputGroup}>
       <View style={styles.labelRow}>
         <Text style={styles.label}>{label}</Text>
-        <MaterialIcons name={icon} size={16} color="#475569" />
+        <MaterialIcons name={icon as any} size={16} color="#475569" />
       </View>
       <TextInput
         style={[styles.input, isFocused && styles.inputFocused]}
